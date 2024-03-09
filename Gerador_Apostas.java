@@ -44,9 +44,11 @@ public class Gerador_Apostas {
                     apostas[i] = numeroGerado;
                 }
                 System.out.print("\n Os números gerados foram: \n");
-                // For utilizado para mostrar os números gerados na mesma linha e espaçados
-                for (int i = 0; i < quantidadeNumeros; i++) {
-                    System.out.print(apostas[i] + " ");
+                // Método que organiza o array em ordem crescente
+                Arrays.sort(apostas);
+                // For que percorre o array apostas e vai colocando em linha única com espaços
+                for (int aposta : apostas) {
+                    System.out.print(aposta + " ");
                 }
                 System.out.println("\n\n Deseja continuar? \n");
                 System.out.println("1 - SIM");
